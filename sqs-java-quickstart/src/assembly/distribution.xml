@@ -1,0 +1,32 @@
+<assembly>
+     <id>zip</id>
+     <formats>
+       <format>zip</format>
+     </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+  <dependencySets>
+    <dependencySet>
+      <outputDirectory>/lib</outputDirectory>
+      <useProjectArtifact>true</useProjectArtifact>
+      <unpack>false</unpack>
+      <scope>runtime</scope>
+      <excludes>
+        <exclude>AUTHORS*</exclude>
+        <exclude>LICENSE*</exclude>
+        <exclude>*.html</exclude>
+        <exclude>release-timestamp.txt</exclude>
+      </excludes>
+    </dependencySet>
+  </dependencySets>
+<!--
+  <fileSets>
+    <fileSet>
+      <directory>${project.build.directory}</directory>
+      <outputDirectory>/lib</outputDirectory>
+      <includes>
+       <include>*.jar</include>
+      </includes>
+    </fileSet>
+  </fileSets>
+-->
+</assembly>
